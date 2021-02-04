@@ -2,8 +2,10 @@ const express = require('express');
 
 const app = express();
 
+app.use(express.json());
+
 app.get("/", (req, res) => {
-    res.send("introdução a API")
+    return res.json({titulo: "Como criar API??????"})
 });
 
 app.listen(8080, () => {
